@@ -1,0 +1,18 @@
+apply plugin: 'java'
+apply plugin: 'war'
+
+group 'io.hot.cool'
+version '0.0.1'
+
+repositories {
+    maven { url "https://maven.java.net/content/repositories/snapshots/" }
+    mavenCentral()
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile ("joda-time:joda-time:2.2",
+            "com.sun.jersey:jersey-server:1.8"
+    )
+}
